@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Creators Club | AIクリエイター・ポートフォリオサイト</title>
+  <meta name="description" content="AI Creators Clubは福岡を拠点とするAIクリエイター専門のポートフォリオサイト。審査制で選ばれた映像制作・音楽制作・AIアートのプロフェッショナルが集結。企業の制作発注・クリエイター参加募集中。">
+  <link rel="canonical" href="https://aicreatorsclub.jp/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Creators Club | AIクリエイター・ポートフォリオサイト">
+  <meta property="og:description" content="審査制で選ばれたAIクリエイターのプロフェッショナル集団。映像・音楽・番組制作からシステム開発、AIコンサルまで。">
+  <meta property="og:url" content="https://aicreatorsclub.jp/">
+  <meta property="og:image" content="https://aicreatorsclub.jp/media/hero/hero_poster.jpg">
+  <meta property="og:site_name" content="AI Creators Club">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="geo.region" content="JP-40">
+  <meta name="geo.placename" content="Fukuoka">
+  <meta name="theme-color" content="#f6f4ef">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%23111014'/><text x='16' y='21' font-size='13' font-weight='800' text-anchor='middle' fill='%23d4ff3a' font-family='Arial'>AI</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/aicreatorsclub-renewal/media/hero/hero_poster.jpg">
+  <link rel="stylesheet" href="/aicreatorsclub-renewal/assets/site.css">
+</head>
+<body data-page="home" id="top">
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__word">
+      <span style="animation-delay:.05s">A</span><span style="animation-delay:.1s">I</span><span style="animation-delay:.15s">&nbsp;</span><span style="animation-delay:.2s">C</span><span style="animation-delay:.25s">R</span><span style="animation-delay:.3s">E</span><span style="animation-delay:.35s">A</span><span style="animation-delay:.4s">T</span><span style="animation-delay:.45s">O</span><span style="animation-delay:.5s">R</span><span style="animation-delay:.55s">S</span>
+    </div>
+    <div class="loader__bar"></div>
+  </div>
+
+  <div id="site-header"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob--1"></div><div class="blob blob--2"></div><div class="blob blob--3"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <span class="eyebrow reveal" id="hero-eyebrow">&nbsp;</span>
+          <h1 class="hero__title" id="hero-title">&nbsp;</h1>
+          <p class="hero__lead reveal" style="--d:.5s" id="hero-lead"></p>
+          <div class="hero__cta reveal" style="--d:.65s">
+            <a class="btn btn--lg" href="#creators"><span class="btn__label"><span>クリエイターを見る</span><span aria-hidden="true">クリエイターを見る</span></span><span class="btn__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+            <a class="btn btn--ghost btn--lg" href="#contact"><span class="btn__label"><span>お問い合わせ</span><span aria-hidden="true">お問い合わせ</span></span><span class="btn__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+          </div>
+          <div class="hero__en reveal" style="--d:.8s" id="hero-stats"></div>
+        </div>
+        <div class="hero__media reveal" style="--d:.3s">
+          <a class="badge-rot" href="#works" aria-label="実績を見る" data-hover>
+            <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="circ" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs><text><textPath href="#circ">SCREENED • AI • CREATORS • SHOWREEL • </textPath></text></svg>
+            <b>↓</b>
+          </a>
+          <div class="hero__frame">
+            <video id="hero-video" muted autoplay loop playsinline preload="auto"></video>
+            <span class="hero__tag"><i></i>SHOWREEL 2026</span>
+          </div>
+          <span class="sticker sticker--a">#審査制</span>
+          <span class="sticker sticker--b">Made in Fukuoka ✦</span>
+        </div>
+      </div>
+      <div class="scroll-hint">SCROLL<i></i></div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__item">MUSIC VIDEO <span class="star">✦</span> <span class="outline">DOCUMENTARY</span> <span class="star">✦</span> COMMERCIAL <span class="star">✦</span> <span class="outline">AI ART</span> <span class="star">✦</span> SYSTEM <span class="star">✦</span> <span class="outline">CONSULTING</span> <span class="star">✦</span></div>
+        <div class="marquee__item">MUSIC VIDEO <span class="star">✦</span> <span class="outline">DOCUMENTARY</span> <span class="star">✦</span> COMMERCIAL <span class="star">✦</span> <span class="outline">AI ART</span> <span class="star">✦</span> SYSTEM <span class="star">✦</span> <span class="outline">CONSULTING</span> <span class="star">✦</span></div>
+      </div>
+    </div>
+    <div class="marquee marquee--lime" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__item">映像制作 <span class="star">✺</span> 音楽・音声 <span class="star">✺</span> 番組制作 <span class="star">✺</span> システム開発 <span class="star">✺</span> AIコンサル <span class="star">✺</span> ホームページ制作 <span class="star">✺</span></div>
+        <div class="marquee__item">映像制作 <span class="star">✺</span> 音楽・音声 <span class="star">✺</span> 番組制作 <span class="star">✺</span> システム開発 <span class="star">✺</span> AIコンサル <span class="star">✺</span> ホームページ制作 <span class="star">✺</span></div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about__grid">
+        <div class="about__side">
+          <span class="eyebrow">About us</span>
+          <h3 id="about-title" class="reveal"></h3>
+        </div>
+        <div>
+          <p class="about__big" id="about-big"></p>
+          <div class="about__body reveal">
+            <p>映像制作、音楽制作、番組制作、システム開発、AIコンサルティング──ジャンルを越えて、審査を通過した実力派だけが集うプラットフォームです。</p>
+            <a class="btn btn--ghost" href="#contact"><span class="btn__label"><span>相談してみる</span><span aria-hidden="true">相談してみる</span></span><span class="btn__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REASONS -->
+    <section class="section reasons" id="reasons">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow">Why us</span>
+            <h2 class="sec-title split">WHY<br>CHOOSE US<span class="ja">AIクリエイターズクラブが選ばれる理由</span></h2>
+          </div>
+          <p class="sec-lead reveal">審査を通過した実力派クリエイターだけが集う、品質保証型プラットフォーム。</p>
+        </div>
+        <div class="reasons__grid" id="reasons-grid"></div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section class="section" id="works">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow">Show reel</span>
+            <h2 class="sec-title split">SELECTED<br>WORKS<span class="ja">制作実績</span></h2>
+          </div>
+          <p class="sec-lead reveal">AIを活用した映像・音楽・アート作品の実績を動画でご紹介。クリエイターたちの表現力と技術の融合をお楽しみください。</p>
+        </div>
+        <div class="works__grid works__grid--feature" id="works-grid"></div>
+        <div class="works__more reveal">
+          <a class="btn btn--lg" href="/aicreatorsclub-renewal/works"><span class="btn__label"><span>実績をもっと見る</span><span aria-hidden="true">実績をもっと見る</span></span><span class="btn__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATORS -->
+    <section class="section creators" id="creators">
+      <div class="container">
+        <div class="sec-head">
+          <div>
+            <span class="eyebrow">Creators</span>
+            <h2 class="sec-title split">MEET THE<br>CREATORS<span class="ja">注目クリエイター</span></h2>
+          </div>
+          <p class="sec-lead reveal">カードをクリックすると、各クリエイターの詳細をご覧いただけます。</p>
+        </div>
+        <div class="filters" id="creator-filters"></div>
+        <div class="creators__grid" id="creators-grid"></div>
+        <p class="creators__note reveal">✦ その他多数のクリエイターが所属中 ✦</p>
+      </div>
+    </section>
+
+    <!-- CTA / CONTACT -->
+    <section class="section cta" id="contact">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <div class="cta__big split">LET'S<br>CRE<span class="o">A</span>TE.</div>
+        <h2 class="cta__title reveal" id="contact-title"></h2>
+        <p class="cta__text reveal" id="contact-text"></p>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="field field--full">
+              <label>ご相談の種類</label>
+              <div class="type-pills">
+                <input type="radio" name="type" id="t1" value="制作のご依頼" checked><label for="t1">制作のご依頼</label>
+                <input type="radio" name="type" id="t2" value="クリエイター参加"><label for="t2">クリエイター参加</label>
+                <input type="radio" name="type" id="t3" value="取材・提携"><label for="t3">取材・提携</label>
+                <input type="radio" name="type" id="t4" value="その他"><label for="t4">その他</label>
+              </div>
+            </div>
+            <div class="field"><label for="f-name">お名前<em>*</em></label><input id="f-name" name="name" required autocomplete="name" placeholder="山田 太郎"></div>
+            <div class="field"><label for="f-email">メールアドレス<em>*</em></label><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>
+            <div class="field field--full"><label for="f-company">会社名・団体名</label><input id="f-company" name="company" autocomplete="organization" placeholder="任意"></div>
+            <div class="field field--full"><label for="f-msg">お問い合わせ内容<em>*</em></label><textarea id="f-msg" name="message" required placeholder="制作内容・ご予算・納期などお気軽にご記入ください"></textarea><span class="count" id="msg-count">0 / 500</span></div>
+          </div>
+          <div class="form-foot">
+            <small>* は必須項目です</small>
+            <button class="btn btn--lg" type="submit"><span class="btn__label"><span>送信する</span><span aria-hidden="true">送信する</span></span><span class="btn__icon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></button>
+          </div>
+          <p class="form-msg" id="form-msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script>window.ACC_STATIC={base:"/aicreatorsclub-renewal/"}</script>
+  <script src="/aicreatorsclub-renewal/assets/site.js"></script>
+</body>
+</html>
