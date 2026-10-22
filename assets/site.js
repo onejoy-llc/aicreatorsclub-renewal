@@ -422,6 +422,14 @@
   }
 
   /* ---------- contact form ---------- */
+  const mailRelayUrl = (to) => `https://formsubmit.co/ajax/${encodeURIComponent(to)}`;
+  const mailPayload = (b) => ({
+    _subject: `【AI Creators Club】お問い合わせ（${b.type || 'その他'}）${b.name}様`,
+    _template: 'table',
+    お名前: b.name, メールアドレス: b.email, 会社名: b.company || '-', 種別: b.type, お問い合わせ内容: b.message,
+    email: b.email,
+  });
+  let content = null;
   function initContact() {
     const form = $('#contact-form');
     if (!form) return;
@@ -438,16 +446,19 @@
       const body = Object.fromEntries(new FormData(form));
       const submit = $('button[type=submit]', form);
       submit.disabled = true;
-      if (STATIC) {
-        msg.classList.add('err');
-        msg.textContent = 'このページはプレビュー版のため、フォームの送信はできません。';
-        submit.disabled = false;
-        return;
-      }
       try {
-        const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-        const j = await r.json();
-        if (!r.ok) throw new Error(j.error || '送信に失敗しました');
+        if (STATIC) {
+          // no server on the static build: hand the message straight to FormSubmit
+          const to = (content && content.settings.contact.notifyEmail) || '';
+          if (!to) throw new Error('送信先が設定されていません');
+          const r = await fetch(mailRelayUrl(to), { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(mailPayload(body)) });
+          const j = await r.json().catch(() => ({}));
+          if (!r.ok || String(j.success) !== 'true') throw new Error('送信に失敗しました。時間をおいて再度お試しください。');
+        } else {
+          const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+          const j = await r.json();
+          if (!r.ok) throw new Error(j.error || '送信に失敗しました');
+        }
         form.innerHTML = `<div class="form-done"><div class="big">Thank you!</div><p>お問い合わせを受け付けました。担当者より折り返しご連絡いたします。</p></div>`;
       } catch (err) {
         msg.classList.add('err');
@@ -477,6 +488,7 @@
   /* ---------- boot ---------- */
   bindButtons();
   fetch(STATIC ? BASE + 'content.json' : '/api/content').then((r) => r.json()).then((data) => {
+    content = data;
     if (page === 'home') initHome(data);
     if (page === 'works') initWorksPage(data);
     observe();
